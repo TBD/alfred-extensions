@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>action</key>
+	<false/>
+	<key>background</key>
+	<false/>
+	<key>category</key>
+	<string>APPLESCRIPTS</string>
+	<key>command</key>
+	<string>tell application "Google Chrome"	try		tell (first tab of every window whose URL contains "http://plugins.ro/sgp/") to execute javascript "audio.paused ? audio.play() : audio.pause();"	end tryend tell</string>
+	<key>keyword</key>
+	<string>sgp</string>
+	<key>subtitle</key>
+	<string>play/pause SGP on Chrome</string>
+	<key>title</key>
+	<string>play/pause SGP on Chrome</string>
+</dict>
+</plist>
