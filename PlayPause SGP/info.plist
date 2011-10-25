@@ -9,7 +9,16 @@
 	<key>category</key>
 	<string>APPLESCRIPTS</string>
 	<key>command</key>
-	<string>tell application "Google Chrome"	try		tell (first tab of every window whose URL contains "http://plugins.ro/sgp/") to execute javascript "audio.paused ? audio.play() : audio.pause();"	end tryend tell</string>
+	<string>tell application "Google Chrome"
+	tell every window
+		repeat with t in tabs
+			set link to URL of t
+			if link contains "http://plugins.ro" then
+				tell t to execute javascript "audio.paused ? audio.play() : audio.pause();"
+			end if
+		end repeat
+	end tell
+end tell</string>
 	<key>keyword</key>
 	<string>sgp</string>
 	<key>subtitle</key>
