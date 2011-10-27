@@ -12,7 +12,7 @@
 	<string>tell application "Google Chrome"
 	tell every window
 		repeat with t in tabs
-			if URL of t contains "http://plugins.ro" then
+			if URL of t contains "http://plugins.ro/sgp" then
 				tell t to execute javascript "audio.paused ? audio.play() : audio.pause();"
 			end if
 		end repeat
